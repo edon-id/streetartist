@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fcebd5;
+}
+
+.bg-wrapper {
+  background-color: #edd5bb !important;
+}
+
+.header-div {
+  background: #fcebd4;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
+  position: sticky;
+  top: 0;
+  height: 70px;
+  z-index: 777;
+}
+
+.logo-text {
+  font-family: "Reenie Beanie", sans-serif;
+  color: #a16a5e;
+  margin-bottom: 0;
+  padding-left: 22px;
+  line-height: 26px;
+}
+
+.logo-div {
+  margin-top: 45px;
+}
+.logo-div .logo {
+  height: 140px;
+  width: 140px;
+}
+
+.logo-position {
+  position: fixed;
+  top: 0px;
+  width: 90px;
+  height: 90px;
+  z-index: 778;
+}
+
+.logo-hammer {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  z-index: 111;
+}
+
+/* LANDING PAGE  */
+
+#landingPage .text-logo2 {
+  font-family: "Reenie Beanie", sans-serif;
+  color: #a16a5e;
+  margin-bottom: 0;
+  line-height: 26px;
+}
+
+#landingPage .join-as-artist {
+  background-color: #edd5bb;
+  position: absolute;
+  top: 330px;
+  width: 260px;
+  height: 276px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+  transition: all ease-in 0.4s;
+  cursor: pointer;
+}
+
+#landingPage .join-as-artist:hover {
+  transform: scale(1.06);
+}
+
+#landingPage .join-as-artist h1 {
+  font-family: "Reenie Beanie", sans-serif;
+  color: #a16a5e;
+}
+
+#landingPage .select-style {
+  background-color: #edd5bb;
+  color: #a16a5e;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+#landingPage .join-as-visitor {
+  background-color: #a16a5e;
+  position: absolute;
+  top: 413px;
+  width: 260px;
+  height: 276px;
+  -webkit-clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+  transition: all ease-in 0.4s;
+  cursor: pointer;
+}
+
+#landingPage .join-as-visitor:hover {
+  transform: scale(1.06);
+}
+#landingPage .join-as-visitor h1 {
+  font-family: "Reenie Beanie", sans-serif;
+  color: #fcebd5;
+}
+
+/* VISITOR HOME PAGE  */
+
+:root {
+  --my-slider-width: 100%;
+  --my-slider-height: 20vh;
+  --my-slider-elements: 60 !important;
+  --my-slider-elements-displayed: 5;
+  --my-slider-element-width: calc(
+    var(--my-slider-width) / var(--my-slider-elements-displayed)
+  );
+  --my-slider-animation-duration: calc(var(--my-slider-elements) * 3s);
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  :root {
+    --my-slider-width: 100%;
+    --my-slider-height: 16vh;
+    --my-slider-elements-displayed: 2;
+  }
+
+.my-slider:before,
+.my-slider:after {
+    width: 80px;
+  }
+}
+
+#visitorHomePage {
+  font-family: 'Roboto', sans-serif;
+}
+
+#visitorHomePage .header-div h2 {
+  font-size: 30px;
+}
+
+#visitorHomePage .wall-bricks {
+  background-image: url(../images/Bricks.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+
+.masterpiece {
+  color: #a16a5e;
+}
+
+#visitorHomePage .wall-bricks button {
+  background-color: #a16a5e;
+  border: none;
+  width: 120px;
+}
+
+#visitorHomePage .wall-bricks button a {
+  color: beige;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.bg-wrapper {
+  background-color: #edd5bb !important;
+}
+
+#visitorHomePage .slider-wrapper .my-slider {
+  position: relative;
+  overflow: hidden;
+  color: #eee;
+  width: var(--my-slider-width);
+  height: var(--my-slider-height);
+}
+
+#visitorHomePage .slider-wrapper .my-slider img {
+  width: 208px;
+  height: 154px;
+}
+
+#visitorHomePage .slider-wrapper .my-slider:before,
+#visitorHomePage .slider-wrapper .my-slider:after {
+  width: 160px;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+#visitorHomePage .slider-wrapper .my-slider:before {
+  background: linear-gradient(to right, #100 0%, transparent 100%);
+  left: 0;
+}
+
+#visitorHomePage .slider-wrapper .my-slider:after {
+  background: linear-gradient(to left, #100 0%, transparent 100%);
+  right: 0;
+}
+
+#visitorHomePage .slider-wrapper .my-slider-content {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  -webkit-animation: scrolling var(--my-slider-animation-duration) linear infinite;
+  animation: scrolling var(--my-slider-animation-duration) linear infinite;
+  z-index: 111;
+}
+
+#visitorHomePage .slider-wrapper .my-slider-content.left-right {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  -webkit-animation: scrolling1 var(--my-slider-animation-duration) linear infinite;
+          animation: scrolling1 var(--my-slider-animation-duration) linear infinite;
+}
+
+#visitorHomePage .slider-wrapper .my-slider-content:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--my-slider-element-width) * var(--my-slider-elements)));
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--my-slider-element-width) * var(--my-slider-elements)));
+  }
+}
+
+@-webkit-keyframes scrolling1 {
+  0% {
+    transform: translateX(calc(-1 * var(--my-slider-element-width) * var(--my-slider-elements)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrolling1 {
+  0% {
+    transform: translateX(calc(-1 * var(--my-slider-element-width) * var(--my-slider-elements)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#visitorHomePage .slider-wrapper .my-slider-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0px 15px;
+  max-height: 100%;
+  white-space: nowrap;
+  width: var(--my-slider-element-width);
+  font-size: calc(var(--my-slider-height) * 3 / 4);
+}
+
+#visitorHomePage .slider-wrapper .my-slider-content li img {
+  width: 100%;
+  border: 2px solid beige;
+}
+
+#visitorHomePage .carousel,
+#visitorHomePage .carousel-inner,
+#visitorHomePage .carousel-inner .item {
+  height: 100%;
+}
+
+#visitorHomePage .carousel-control-next {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+}
+
+#visitorHomePage .carousel-control-prev {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+}
+
+#visitorHomePage .carousel-item .c-outer {
+  margin-top: 30px;
+  padding: 30px 25px;
+}
+
+#visitorHomePage .carousel-item .c-outer img {
+  position: absolute;
+  top: 45px;
+  left: 64px;
+}
+
+#visitorHomePage .carousel-item .c-inner {
+  padding: 40px 10px 8px 10px;
+}
+
+#visitorHomePage .carousel-item .c-left {
+  padding: 10px 0px 10px 0px;
+}
+
+#visitorHomePage .b-right {
+  border-right: 1px solid #a16a5e;
+}
+
+.text-carousel-color {
+  color: #a16a5e !important;
+}
+
+.bg-wrapper2 {
+  background-color: #e09686 !important;
+}
+
+.bg-wrapper3 {
+  background-color: #a16a5e !important;
+}
+
+.bg-wrapper4 {
+  background-color: #d44c2e !important;
+}
+
+.bg-wrapper5 {
+  background-color: #fcebd5 !important;
+}
+
+/* VISITOR LISTING PAGE  */
+
+#visitorListingPage {
+  position: fixed;
+  overflow-x: hidden;
+}
+
+#visitorListingPage .filterIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 360;
+  cursor: pointer;
+}
+
+#visitorListingPage .visitors-item {
+  height: calc(100vh - 70px);
+  padding-top: 20px;
+}
+
+#visitorListingPage .visitors-item .itemImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+#visitorListingPage .evenDiv {
+  padding-bottom: 20px;
+}
+
+#visitorListingPage .evenDiv .itemDescription {
+  position: relative;
+  padding: 10px 16px;
+  background-color: #fcebd5;
+}
+
+#visitorListingPage .evenDiv .itemDescription h2 {
+  font-family: "Reenie Beanie", sans-serif;
+  color: #a16a5e;
+}
+
+#visitorListingPage .evenDiv .itemDescription h6 {
+  color: #a16a5e;
+  margin-bottom: 0px;
+}
+
+#visitorListingPage .evenDiv .itemDescription p {
+  color: #a16a5e;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#visitorListingPage .evenDiv .itemDescription span {
+  background-color: #a16a5e;
+  color: #fcebd5;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+#visitorListingPage .oddDiv {
+  padding-bottom: 20px;
+}
+
+#visitorListingPage .oddDiv .itemDescription {
+  background-color: #a16a5e;
+  position: relative;
+  padding: 10px 16px;
+}
+
+#visitorListingPage .oddDiv .itemDescription h2 {
+  font-family: "Reenie Beanie", sans-serif;
+  color: #fcebd5;
+}
+
+#visitorListingPage .oddDiv .itemDescription h6 {
+  color: #fcebd5;
+  margin-bottom: 0px;
+}
+
+#visitorListingPage .oddDiv .itemDescription p {
+  color: #fcebd5;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#visitorListingPage .oddDiv .itemDescription span {
+  background-color: #fcebd5;
+  color: #a16a5e;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+#visitorListingPage .visitor-filter-page {
+  position: fixed;
+  top: 70px;
+  left: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  z-index: 777;
+}
+
+#visitorListingPage .visitor-filter-page .filters {
+  background-color: #a16a5e;
+  height: calc(100vh - 70px);
+  padding: 18px;
+}
+
+#visitorListingPage .visitor-filter-page .filters .form-check-input {
+  width: 16px;
+  height: 16px;
+}
+
+#visitorListingPage .visitor-filter-page .filters .space-even {
+  justify-content: space-evenly;
+}
+
+#visitorListingPage .visitor-filter-page .filters h2 {
+  color: #fcebd5;
+  font-size: 30px;
+}
+
+#visitorListingPage .visitor-filter-page .filters label {
+  color: #edd5bb;
+  font-weight: 350;
+  font-size: 18px;
+}
+
+#visitorListingPage .visitor-filter-page .filters .submit-filter-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#visitorListingPage .visitor-filter-page .filters .cancel-filter-icon {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#visitorListingPage .filter-move {
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+/* ARTIST HOME PAGE  */
+
+.dropdown {
+  position: static;
+  top: 18px;
+}
+
+.dropdown button {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
+
+.dropdown .dropdown-menu {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  margin-top: 10px !important;
+  width: 100% !important;
+  transform: translate3d(0px, 62px, 0px) !important;
+}
+
+.dropdown .dropdown-menu a {
+  font-size: 30px;
+  color: whitesmoke !important;
+}
+
+.dropdown .dropdown-menu a:hover {
+  color: rgb(99, 96, 96) !important;
+}
+
+#artistHomePage {
+font-family: "Roboto", sans-serif;
+}
+
+#artistHomePage .income-tables {
+  background-color: #edd5bb;
+}
+
+#artistHomePage .income-tables a {
+  text-decoration: none;
+}
+
+#artistHomePage .income-tables p {
+  font-size: 18px;
+}
+
+#artistHomePage .income-tables span {
+  font-size: 18px;
+}
+
+#artistHomePage .income-tables .money-income,
+#artistHomePage .income-tables .number-of-items-sold,
+#artistHomePage .income-tables .auctioning-money-income {
+  font-size: 38px;
+}
+
+#artistHomePage .income-tables .total-income,
+#artistHomePage .income-tables .total-items-sold {
+  border-radius: 20px;
+}
+
+#artistHomePage .days-btn {
+  width: 116px;
+  height: 28px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#artistHomePage .chart-title {
+  font-size: 18px;
+  font-weight: 300;
+  color: #a16a5e !important;
+}
+
+#artistHomePage button.bg-wrapper3:hover {
+  background-color: #d44c2e !important;
+}
+
+#artistHomePage button.bg-wrapper3:focus {
+  background-color: #d44c2e !important;
+}
+
+/* ARTIST ITEMS PAGE  */
+
+#artistItemsPage .overflowDiv {
+  overflow-x: hidden;
+}
+
+#artistItemsPage .add-new-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  color: #a16a5e;
+  border: 2px dashed #a16a5e;
+  font-size: 18px;
+}
+
+#artistItemsPage .add-new-item:hover {
+  color: #a16a5e;
+  text-decoration: none;
+}
+
+#artistItemsPage .item-wrapper .itemImg {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+#artistItemsPage .itemDescription {
+  position: relative;
+  padding: 10px 16px;
+}
+
+#artistItemsPage .itemDescription h6 {
+  margin-bottom: 0px;
+}
+
+#artistItemsPage .itemDescription small {
+  color: #e09686;
+}
+
+#artistItemsPage .itemDescription p {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#artistItemsPage .itemDescription span {
+  background-color: #a16a5e;
+  color: #fcebd5;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+#artistItemsPage .itemButtons {
+  background-color: #a16a5e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+#artistItemsPage .itemButtons .btnAuction {
+  background-color: #1b59ac;
+  color: #fcebd5;
+  display: flex !important;
+  align-items: center;
+  padding: 0px 20px;
+  height: 30px;
+}
+
+#artistItemsPage .itemButtons .btnUnpublish {
+  background-color: #1bac6f;
+  color: #fcebd5;
+  display: flex !important;
+  align-items: center;
+  padding: 0px 20px;
+  height: 30px;
+}
+
+#artistItemsPage .itemButtons .btnPublish {
+  background-color: #e5e5e5;
+  color: #5a5a5a;
+  display: flex !important;
+  align-items: center;
+  padding: 0px 20px;
+  height: 30px;
+}
+
+#artistItemsPage .itemButtons .btnRemove {
+  background-color: #d44c2e;
+  color: #fcebd5;
+  display: flex !important;
+  align-items: center;
+  padding: 0px 20px;
+  height: 30px;
+}
+
+#artistItemsPage .itemButtons .btnEdit {
+  background-color: #fcebd5;
+  color: #a16a5e;
+  display: flex !important;
+  align-items: center;
+  padding: 0px 20px;
+  height: 30px;
+}
+
+/* ARTIST ADD NEW ITEMS PAGE  */
+
+#artistAddNewItemsPage {
+  overflow: hidden;
+}
+
+#artistAddNewItemsPage form {
+  background-color: #a16a5e;
+  overflow: auto;
+  height: calc(100vh - 70px);
+  padding: 18px;
+}
+
+#artistAddNewItemsPage form .form-check-input {
+  width: 16px;
+  height: 16px;
+}
+
+#artistAddNewItemsPage form h3 {
+  color: #fcebd5;
+  font-size: 30px;
+}
+
+#artistAddNewItemsPage form label {
+  color: #edd5bb;
+  font-weight: 350;
+  font-size: 18px;
+}
+
+#artistAddNewItemsPage form button {
+  height: 40px;
+  width: 175px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#artistAddNewItemsPage .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 310px;
+  border: 2px dashed #fcebd5;
+}
+
+#artistAddNewItemsPage .wrapper i {
+  font-size: 70px;
+  color: #edd5bb;
+}
+
+.bg-orange {
+  color: #fff;
+  background-color: #d44c2e;
+  border-color: #d44c2e;
+}
+
+.bg-orange:hover {
+  color: #fff;
+  background-color: #b64025;
+  border-color: #ac3c23;
+}
+
+.bg-orange:focus, .bg-orange.focus {
+  color: #fff;
+  background-color: #b64025;
+  border-color: #ac3c23;
+  box-shadow: 0 0 0 0.2rem rgba(218, 103, 77, 0.5);
+}
+
+.bg-orange.disabled, .bg-orange:disabled {
+  color: #fff;
+  background-color: #d44c2e;
+  border-color: #d44c2e;
+}
+
+.bg-orange:not(:disabled):not(.disabled):active, .bg-orange:not(:disabled):not(.disabled).active, .show > .bg-orange.dropdown-toggle {
+  color: #fff;
+  background-color: #ac3c23;
+  border-color: #a13821;
+}
+
+.bg-orange:not(:disabled):not(.disabled):active:focus, .bg-orange:not(:disabled):not(.disabled).active:focus, .show > .bg-orange.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(218, 103, 77, 0.5);
+}
+
+.bg-gray {
+  color: #212529;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.bg-gray:hover {
+  color: #212529;
+  background-color: #d2d2d2;
+  border-color: #cccccc;
+}
+
+.bg-gray:focus, .bg-gray.focus {
+  color: #212529;
+  background-color: #d2d2d2;
+  border-color: #cccccc;
+  box-shadow: 0 0 0 0.2rem rgba(200, 200, 201, 0.5);
+}
+
+.bg-gray.disabled, .bg-gray:disabled {
+  color: #212529;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.bg-gray:not(:disabled):not(.disabled):active, .bg-gray:not(:disabled):not(.disabled).active, .show > .bg-gray.dropdown-toggle {
+  color: #212529;
+  background-color: #cccccc;
+  border-color: #c5c5c5;
+}
+
+.bg-gray:not(:disabled):not(.disabled):active:focus, .bg-gray:not(:disabled):not(.disabled).active:focus, .show > .bg-gray.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(200, 200, 201, 0.5);
+}
+
+/* CAPTURE IMAGE PAGE  */
+
+#captureImagePage .container-fluid, #captureImagePage .container-sm, #captureImagePage .container-md, #captureImagePage .container-lg, #captureImagePage .container-xl {
+  background-color: #a16a5e;
+  height: calc(100vh - 70px);
+}
+
+#captureImagePage .container-fluid .photo-button, #captureImagePage .container-sm .photo-button, #captureImagePage .container-md .photo-button, #captureImagePage .container-lg .photo-button, #captureImagePage .container-xl .photo-button {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 30px);
+}
+
+#captureImagePage .container-fluid .photo-button .fa-camera, #captureImagePage .container-sm .photo-button .fa-camera, #captureImagePage .container-md .photo-button .fa-camera, #captureImagePage .container-lg .photo-button .fa-camera, #captureImagePage .container-xl .photo-button .fa-camera {
+  color: #edd5bb;
+  font-size: 60px;
+}
+
+#camera {
+  text-align: center;
+}
+
+/* AUCTION PAGE  */
+
+#auctionPage .bidding-cont {
+  height: calc(100vh - 70px);
+}
+
+#auctionPage .for-rendering .itemImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+#auctionPage .for-rendering .itemDescription {
+  position: relative;
+  padding: 10px 16px;
+}
+
+#auctionPage .for-rendering .itemDescription h6 {
+  margin-bottom: 0px;
+}
+
+#auctionPage .for-rendering .itemDescription small {
+  color: #e09686;
+}
+
+#auctionPage .for-rendering .itemDescription p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#auctionPage .for-rendering .itemDescription span {
+  background-color: #a16a5e;
+  color: #fcebd5;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+#auctionPage .div-for-bidding {
+  overflow: auto;
+  height: 200px;
+}
+
+#auctionPage .div-for-bidding .biddingDone,
+#auctionPage .div-for-bidding .myBid,
+#auctionPage .div-for-bidding .hisBid {
+  padding: 5px;
+  font-size: 18px;
+}
+
+#auctionPage .div-for-bidding .myBid {
+  background-color: rgba(161, 106, 94, 0.08);
+  color: #1bac6f;
+}
+
+#auctionPage .div-for-bidding .hisBid {
+  color: red;
+}
+
+#auctionPage .bidding-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5a5a5a;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#auctionPage .bidding-footer input {
+  background: transparent;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(245, 245, 245, 0.5) !important;
+  border: none;
+  width: 60%;
+  border-radius: 4px;
+  font-size: 28px;
+}
+
+#auctionPage .bidding-footer button {
+  width: 34%;
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+#auctionPage .bidding-footer button .hammer-btn {
+  margin-right: 10px;
+}
+
+#image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .itemButtons .btn {
+    font-size: 14px;
+    padding: 0px 10px !important;
+  }
+}
